@@ -5,7 +5,7 @@ Tutaj powstanie nasz projekt dotyczący gry survival'owej w realiach postapokali
 <ol>
   <li><a href="#Cel">Cel gry</a></li>
   <li><a href="#Bohater">Bohater</a></li>
-  <li><a href="Swiat">Świat gry</a></li>
+  <li><a href="#Swiat">Świat gry</a></li>
 </ol>
 
 <h3><a name="Cel">Cel gry</a></h3><br />
