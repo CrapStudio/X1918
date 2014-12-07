@@ -28,3 +28,4 @@ Dodane również zostaną punkty choroby psychicznej (PCP), które gdy osiągną
 We wioskach i mistach będą się generować również budynki, zwierzęta i przedmioty, które gracz będzie mógł zebrać. Ze zwierzętami będzie możliwa interakcja np. dojenie krowy, zabicie zwierzęcia itp.<br />
 W lasach będą czychać niebezpieczeństwa takie jak niedźwiedzie, dziki, czy też niebezpieczni <i> bandyci</i>- najprawdopodobniej inni ocalali z apokalipsy, którzy niechętnie będą rozmawiać z graczem.
 
+//To-Do- dokończenie opisu gry
