@@ -1,10 +1,9 @@
-<b> Tytuł roboczy </b> <br />
-<b>Tutaj powstanie nasz projekt dotyczący gry survival'owej w realiach postapokaliptycznego średniowiecza</b> <br />
+<h1> Tytuł roboczy </h1> <br />
+Tutaj powstanie nasz projekt dotyczący gry survival'owej w realiach postapokaliptycznego średniowiecza<br />
 
-<b>Koncept</b>
-<br />
-<ul>
+<h2>Koncept</h2>
+<ol>
   <li>Cel gry</li>
   <li>Bohater</li>
   <li>Świat gry</li>
-</ul>
+</ol>
