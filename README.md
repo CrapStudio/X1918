@@ -9,5 +9,7 @@ Tutaj powstanie nasz projekt dotyczący gry survival'owej w realiach postapokali
 </ol>
 
 <h3><a name="Cel">Cel gry</a></h3><br />
+Głównym celem tej gry jest próba przeżycia w trudnych warunkach <i>"martwego"</i> świata.<br />
+
 <h3><a name="Bohater">Bohater</a></h3><br />
 <h3><a name="Swiat">Świat gry</a></h3><br />
