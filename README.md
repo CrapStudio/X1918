@@ -11,7 +11,7 @@ Tutaj powstanie nasz projekt dotyczący gry survival'owej w realiach postapokali
 <h3><a name="Cel">Cel gry</a></h3>
 
 Głównym celem tej gry jest próba przeżycia w trudnych warunkach <i>"martwego"</i> świata.<br />
-Gracz będzie musiał zbierać jedzenie, wodę, drewno oraz inne rzeczy potrzebne do przetrwania. Gra będzie również oferować system craftingu (zbierz rzeczy by stworzyć inną rzecz).< br />
+Gracz będzie musiał zbierać jedzenie, wodę, drewno oraz inne rzeczy potrzebne do przetrwania. Gra będzie również oferować system craftingu (zbierz rzeczy by stworzyć inną rzecz).<br />
 Gra będzie na tyle ciężka, że nie będzie dawała graczowi możliwości zwiększenia puli HP, nawet na samym początku gracz będzie musiał się zmierzać z niebezpieczeństwami, które będą mu towarzyszyły mu podczas podróży przez ogromny świat.
 
 <h3><a name="Bohater">Bohater</a></h3>
