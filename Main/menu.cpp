@@ -6,12 +6,12 @@ menu::menu()
     keypad(stdscr,true);
 
     unsigned int wybor, opcja=5, rzedy, kolumny;
-    char tekst[]="Menu glowne\n";
     getmaxyx(stdscr,rzedy,kolumny);
 //////////////////////////////////////////////////////////////////////////
     do{
     if( has_colors() == TRUE ) //1
     {
+        char tekst[]="Menu glowne\n";
         start_color(); //2
         attron(A_BOLD);
         init_pair( 1, COLOR_GREEN, COLOR_BLACK ); //3
