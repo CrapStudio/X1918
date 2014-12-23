@@ -4,10 +4,27 @@ menu::menu()
 {
     initscr();
     keypad(stdscr,true);
-    unsigned int wybor, opcja=5;
 
+    unsigned int wybor, opcja=5, rzedy, kolumny;
+    char tekst[]="Menu glowne\n";
+    getmaxyx(stdscr,rzedy,kolumny);
+//////////////////////////////////////////////////////////////////////////
     do{
-    printw( "Menu glowne\n");
+    if( has_colors() == TRUE ) //1
+    {
+        start_color(); //2
+        attron(A_BOLD);
+        init_pair( 1, COLOR_GREEN, COLOR_BLACK ); //3
+        attron( COLOR_PAIR( 1 ) ); //4
+        mvprintw( rzedy=0,( kolumny / 2 ) -( sizeof( tekst ) / 2 ), tekst );
+        attroff( COLOR_PAIR( 1 ) ); //Wyłączenie koloru tekstu
+        attroff(A_BOLD);
+    }
+    else
+    {
+        printw( "Twoja Konsola nie obsluguje kolorow..." );
+    }
+//////////////////////////////////////////////////////////////////////////
     if (wybor == KEY_UP && opcja!=5)
     {
         opcja++;
@@ -20,6 +37,7 @@ menu::menu()
     {
         break;
     }
+//////////////////////////////////////////////////////////////////////////
     if(opcja == 5) attron(A_BOLD);
     printw("Nowa gra\n");
     attroff(A_BOLD);
