@@ -1,29 +1,39 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 #include <math.h>
-class player
-{
-public:
+#include <string>
+using namespace std;
 
-char* imie[];
-int sila;
-int agl;
-int hp;
-int max_hp=sqrt(64*sila);
-int pkt_akcji;
-int waga;
-int inteligencja;
-player(char imie[10], int sila, int agl, int pkt_akcji, int waga, int inteligencja)
+class Player
 {
-this->imie[10]=&imie[10];
-this->sila=sila;
-this->agl=agl;
-this->pkt_akcji=pkt_akcji;
-this->waga=waga;
-this->inteligencja=inteligencja;
-}
-protected:
 private:
-int base_dodge=agl*2;
+    string imie;
+    int sila;
+    int agl;
+    int hp;
+    int max_hp=sqrt(64*sila);
+    int pkt_akcji;
+    int waga;
+    int inteligencja;
+    int base_dodge=agl*2;
+public:
+    string getimie(string);
+    int getsila(int);
+    int getagl(int);
+    int gethp(int);
+    int getmax_hp(int);
+    int getpkt_akcji(int);
+    int getwaga(int);
+    int getinteligencja(int);
+    int getbase_dodge(int);
+
+    Player(int sila, int agl, int pkt_akcji, int waga, int inteligencja)
+    {
+        this->sila=sila;
+        this->agl=agl;
+        this->pkt_akcji=pkt_akcji;
+        this->waga=waga;
+        this->inteligencja=inteligencja;
+    }
 };
 #endif // PLAYER_H
