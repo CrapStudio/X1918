@@ -23,12 +23,9 @@ int agl=17;
 int pkt_akcji=8;
 int waga=70;
 int inteligencja=0;
-char *nazwa[10];
 
-for(int i=0;i<10;i++)
-    nazwa[i]=&imie[i];
 
-player(nazwa[10],sila,agl,pkt_akcji,waga,inteligencja);
+player(&imie[10],sila,agl,pkt_akcji,waga,inteligencja);
 getch();
 endwin();
 }
@@ -36,3 +33,4 @@ newgame::~newgame()
 {
 //dtor
 }
+
