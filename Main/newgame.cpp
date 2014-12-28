@@ -5,11 +5,11 @@ newgame::newgame()
 {
     unsigned int wybor=0;
     initscr();
+    char imie[10];
 
     for(;;){
     printw( "Witaj! Jak masz na imie?\n" );
 
-    char imie[10];
     getstr(imie);
 
     mvprintw(1, 0, "  Czy Twoje imie to %s? (T/N)\n", imie);
@@ -24,14 +24,13 @@ newgame::newgame()
     clear();
     }
 
-        int sila;
-        int agl;
-        int hp;
-        int pkt_akcji;
-        int waga;
-        int inteligencja;
+        int sila=17;
+        int agl=17;
+        int pkt_akcji=8;
+        int waga=70;
+        int inteligencja=0;
 
-
+    player(imie[10],sila,agl,pkt_akcji,waga,inteligencja);
 
     getch();
     endwin();
