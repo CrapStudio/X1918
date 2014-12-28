@@ -1,33 +1,32 @@
 #ifndef PLAYER_H
 #define PLAYER_H
+#include <math.h>
 
 class player
 {
     public:
-        string nazwa;
+        char imie[];
         int sila;
         int agl;
         int hp;
+        int max_hp=sqrt(64*sila);
         int pkt_akcji;
         int waga;
         int inteligencja;
-    protected:
-    private:
-        int base_hp=(3+sila)*4;
-        int base_dodge=agl*2;
 
-    player(string nazwa, int sila, int agl, int hp, int pkt_akcji, int waga, int inteligencja, int base_hp, int base_dodge)
+    player(char imie[10], int sila, int agl, int pkt_akcji, int waga, int inteligencja)
     {
+        this->imie[10]=imie[10];
         this->sila=sila;
         this->agl=agl;
-        this->hp=hp;
         this->pkt_akcji=pkt_akcji;
         this->waga=waga;
         this->inteligencja=inteligencja;
-        this->base_hp=base_hp;
     }
 
-
+    protected:
+    private:
+        int base_dodge=agl*2;
 };
 
 #endif // PLAYER_H
