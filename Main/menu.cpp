@@ -1,4 +1,5 @@
 #include "menu.h"
+#include "newgame.h"
 
 menu::menu()
 {
@@ -82,8 +83,11 @@ menu::menu()
         case 2:break;
         case 3:break;
         case 4:break;
-        case 5:break;
-    }
+        case 5:
+            {
+            newgame();
+            }
+        }
     } while (potwierdzenie != 10);
 endwin();
 }
@@ -92,4 +96,3 @@ menu::~menu()
 {
     //dtor
 }
-
