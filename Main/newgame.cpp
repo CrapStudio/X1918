@@ -12,7 +12,7 @@ newgame::newgame()
     char imie[10];
     getstr(imie);
 
-    mvprintw(1, 2, "Czy Twoje imie to %s? (T/N)\n", imie);
+    mvprintw(1, 0, "  Czy Twoje imie to %s? (T/N)\n", imie);
 
     char wybor1;
     wybor1=getch();
