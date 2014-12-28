@@ -5,8 +5,8 @@ newgame::newgame()
 {
     unsigned int wybor=0;
     initscr();
-    for(;;){
 
+    for(;;){
     printw( "Witaj! Jak masz na imie?\n" );
 
     char imie[10];
@@ -23,6 +23,16 @@ newgame::newgame()
 
     clear();
     }
+
+        int sila;
+        int agl;
+        int hp;
+        int pkt_akcji;
+        int waga;
+        int inteligencja;
+
+
+
     getch();
     endwin();
 }
