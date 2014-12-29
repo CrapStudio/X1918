@@ -17,6 +17,8 @@ private:
     int inteligencja;
     int base_dodge=agl*2;
 public:
+    Player(string imie, int sila, int agl, int pkt_akcji, int waga, int inteligencja);
+    Player();
     string getimie(string);
     int getsila(int);
     int getagl(int);
@@ -26,15 +28,5 @@ public:
     int getwaga(int);
     int getinteligencja(int);
     int getbase_dodge(int);
-
-    Player(string imie, int sila, int agl, int pkt_akcji, int waga, int inteligencja)
-    {
-        this->imie=imie;
-        this->sila=sila;
-        this->agl=agl;
-        this->pkt_akcji=pkt_akcji;
-        this->waga=waga;
-        this->inteligencja=inteligencja;
-    }
 };
 #endif // PLAYER_H
