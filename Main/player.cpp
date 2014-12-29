@@ -1,5 +1,26 @@
 #include "player.h"
 
+    Player::Player()
+    {
+    imie="";
+    sila=0;
+    agl=0;
+    hp=0;
+    pkt_akcji=0;
+    waga=0;
+    inteligencja=0;
+    }
+
+    Player::Player(string imie, int sila, int agl, int pkt_akcji, int waga, int inteligencja)
+    {
+        imie=imie;
+        sila=sila;
+        agl=agl;
+        pkt_akcji=pkt_akcji;
+        waga=waga;
+        inteligencja=inteligencja;
+    }
+
     string Player::getimie(string imie)
     {
         imie=imie;
