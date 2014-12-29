@@ -1,32 +1,26 @@
-#ifndef PLAYER_H
-#define PLAYER_H
+#ifndef MONSTERS_H
+#define MONSTERS_H
+#include <math.h>
+#include <string>
+using namespace std;
 
-class monsters
+class Monsters
 {
-    public:
-        string nazwa;
-        int sila;
-        int agl;
-        int hp;
-        int pkt_akcji;
-        int waga;
-    protected:
-    private:
-        int base_hp=(3+sila)*4;
-        int base_dodge=agl*2;
-
-    monsters(string nazwa, int sila, int agl, int hp, int pkt_akcji, int waga, int inteligencja, int base_hp, int base_dodge)
-    {
-        this->sila=sila;
-        this->agl=agl;
-        this->hp=hp;
-        this->pkt_akcji=pkt_akcji;
-        this->waga=waga;
-        this->inteligencja=inteligencja;
-        this->base_hp=base_hp;
-    }
-
-
+private:
+    string imie;
+    int sila;
+    int agl;
+    int hp;
+    int max_hp=sqrt(64*sila);
+    int base_dodge=agl*2;
+public:
+    Monsters(string imie, int sila, int agl);
+    Monsters();
+    string getimie(string);
+    int getsila(int);
+    int getagl(int);
+    int gethp(int);
+    int getmax_hp(int);
+    int getbase_dodge(int);
 };
-
 #endif // PLAYER_H
