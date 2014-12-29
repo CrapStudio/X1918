@@ -14,8 +14,6 @@ newgame::newgame()
     int inteligencja=0;
     char *nazwa[10];
 
-    Player(sila, agl, pkt_akcji, waga, inteligencja);
-
     for(int i=0;i<10;i++)
         nazwa[i]=&imie[i];
 
@@ -31,6 +29,9 @@ newgame::newgame()
             if (wybor==1) break;
             clear();
             }
+    clear();
+
+    Player(imie, sila, agl, pkt_akcji, waga, inteligencja);
     getch();
 getch();
 endwin();
