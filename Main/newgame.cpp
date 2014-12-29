@@ -1,10 +1,10 @@
 #include "newgame.h"
 #include "player.h"
 #include <iostream>
+#include <math.h>
 
 newgame::newgame()
 {
-    unsigned int wybor=0;
     initscr();
     char imie[10];
     int sila=17;
@@ -12,7 +12,11 @@ newgame::newgame()
     int pkt_akcji=8;
     int waga=70;
     int inteligencja=0;
+    int max_hp=sqrt(64*sila);
+    int hp=max_hp;
+    int base_dodge=agl*2;
     char *nazwa[10];
+    unsigned int wybor, potwierdzenie, opcja=3, rzedy, kolumny, opcja1=3, wybor1;
 
     for(int i=0;i<10;i++)
         nazwa[i]=&imie[i];
@@ -29,18 +33,106 @@ newgame::newgame()
             if (wybor==1) break;
             clear();
             }
-    sila=sila+10;
-    Player(imie, sila, agl, pkt_akcji, waga, inteligencja);
+    clear();
+        do{
+        wybor=0;
+        clear();
+        //Wyswietlanie
+        do{
+            if (wybor == KEY_UP && opcja!=3)
+          {
+            opcja++;
+          }
+            else if (wybor == KEY_DOWN && opcja!=1)
+          {
+            opcja--;
+          }
+            if(wybor == 10)
+          {
+            break;
+          }
+        //
+
+        //Dialog z Nieznajomym
+        start_color();
+        init_pair(1, COLOR_RED, COLOR_BLACK);
+        attron(COLOR_PAIR(1));
+        printw("\n  Nieznajomy: ");
+        attroff(COLOR_PAIR(1));
+        printw("Dawno u siebie nie goscilem zadnego czlowieka... \n");
+        printw("  Wygladasz mi na dobrego czlowieka. Co cie do nas sprowadza, %s?\n\n", imie);
+
+            if(opcja == 3) attron(A_BOLD);
+            printw("  Nic\n");
+            attroff(A_BOLD);
+
+            if(opcja == 2) attron(A_BOLD);
+            printw("  Nie wiem\n");
+            attroff(A_BOLD);
+
+            if(opcja == 1) attron(A_BOLD);
+            printw("  Chcialbym sie dowiedziec czegos wiecej\n");
+            attroff(A_BOLD);
+
+        wybor=getch();
+        clear();
+
+        }while(1==1);
+        switch(opcja)
+            {
+            case 3:
+                {
+                    clear();
+
+                    do{
+                        wybor1=0;
+                        if (wybor1 == KEY_UP && opcja1!=3)
+                        {
+                        opcja1++;
+                        }
+                        else if (wybor1 == KEY_DOWN && opcja1!=1)
+                        {
+                        opcja1--;
+                        }
+                        if(wybor1 == 10)
+                        {
+                        break;
+                        }
+
+        attron(COLOR_PAIR(1));
+        printw("\n  Nieznajomy:");
+        attroff(COLOR_PAIR(1));
+
+                    printw(" Ale i tak skoro u nas sie znalazles moglbys\n  o sobie cos powiedziec.");
+                    printw(" Czym zajmowales sie za dawnego zycia?\n");
+
+            if(opcja1 == 3) attron(A_BOLD);
+            printw("\n  Bylem zolnierzem\n");
+            attroff(A_BOLD);
+
+            if(opcja1 == 2) attron(A_BOLD);
+            printw("  Bylem kupcem\n");
+            attroff(A_BOLD);
+
+            if(opcja1 == 1) attron(A_BOLD);
+            printw("  Wstyd mi sie przyznac, ale bylem... zlodziejem\n");
+            attroff(A_BOLD);
+
+        wybor1=getch();
+
+        clear();
+                      }while(1==1);
+                      }
+            case 2:break;
+            case 1:break;
+            }
+        }while (potwierdzenie != 10);
+
+    Player(imie, sila, agl, hp, pkt_akcji, waga, inteligencja, max_hp, base_dodge);
     Player plr;
-    plr.getsila(sila);
-    printw("%i", sila);
     getch();
     clear();
 
 getch();
 endwin();
-}
-newgame::~newgame()
-{
-//dtor
 }
