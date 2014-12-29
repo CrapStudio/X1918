@@ -27,8 +27,9 @@ public:
     int getinteligencja(int);
     int getbase_dodge(int);
 
-    Player(int sila, int agl, int pkt_akcji, int waga, int inteligencja)
+    Player(string imie, int sila, int agl, int pkt_akcji, int waga, int inteligencja)
     {
+        this->imie=imie;
         this->sila=sila;
         this->agl=agl;
         this->pkt_akcji=pkt_akcji;
