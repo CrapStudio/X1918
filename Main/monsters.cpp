@@ -6,9 +6,6 @@
     sila=0;
     agl=0;
     hp=0;
-    pkt_akcji=0;
-    waga=0;
-    inteligencja=0;
     }
 
     Monsters::Monsters(string imie, int sila, int agl)
