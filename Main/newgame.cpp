@@ -29,10 +29,14 @@ newgame::newgame()
             if (wybor==1) break;
             clear();
             }
+    sila=sila+10;
+    Player(imie, sila, agl, pkt_akcji, waga, inteligencja);
+    Player plr;
+    plr.getsila(sila);
+    printw("%i", sila);
+    getch();
     clear();
 
-    Player(imie, sila, agl, pkt_akcji, waga, inteligencja);
-    getch();
 getch();
 endwin();
 }
