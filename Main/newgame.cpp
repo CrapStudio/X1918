@@ -16,7 +16,7 @@ newgame::newgame()
     int hp=max_hp;
     int base_dodge=agl*2;
     char *nazwa[10];
-    unsigned int wybor, potwierdzenie, opcja=3, rzedy, kolumny, opcja1=3, wybor1;
+    unsigned int wybor, potwierdzenie, opcja=3, rzedy, kolumny;
 
     for(int i=0;i<10;i++)
         nazwa[i]=&imie[i];
@@ -82,19 +82,20 @@ newgame::newgame()
             {
             case 3:
                 {
+                    wybor=0;
+                    opcja=3;
                     clear();
 
                     do{
-                        wybor1=0;
-                        if (wybor1 == KEY_UP && opcja1!=3)
+                        if (wybor == 259 && opcja!=3)
                         {
-                        opcja1++;
+                        opcja++;
                         }
-                        else if (wybor1 == KEY_DOWN && opcja1!=1)
+                        else if (wybor == 258 && opcja!=1)
                         {
-                        opcja1--;
+                        opcja--;
                         }
-                        if(wybor1 == 10)
+                        if(wybor == 10)
                         {
                         break;
                         }
@@ -106,20 +107,19 @@ newgame::newgame()
                     printw(" Ale i tak skoro u nas sie znalazles moglbys\n  o sobie cos powiedziec.");
                     printw(" Czym zajmowales sie za dawnego zycia?\n");
 
-            if(opcja1 == 3) attron(A_BOLD);
+            if(opcja == 3) attron(A_BOLD);
             printw("\n  Bylem zolnierzem\n");
             attroff(A_BOLD);
 
-            if(opcja1 == 2) attron(A_BOLD);
+            if(opcja == 2) attron(A_BOLD);
             printw("  Bylem kupcem\n");
             attroff(A_BOLD);
 
-            if(opcja1 == 1) attron(A_BOLD);
+            if(opcja == 1) attron(A_BOLD);
             printw("  Wstyd mi sie przyznac, ale bylem... zlodziejem\n");
             attroff(A_BOLD);
 
-        wybor1=getch();
-
+        wybor=getch();
         clear();
                       }while(1==1);
                       }
@@ -128,7 +128,7 @@ newgame::newgame()
             }
         }while (potwierdzenie != 10);
 
-    Player(imie, sila, agl, hp, pkt_akcji, waga, inteligencja, max_hp, base_dodge);
+    Player(imie, sila, agl, pkt_akcji, waga, inteligencja);
     Player plr;
     getch();
     clear();
