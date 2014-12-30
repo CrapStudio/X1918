@@ -87,11 +87,11 @@ newgame::newgame()
                     clear();
 
                     do{
-                        if (wybor == 259 && opcja!=3)
+                        if (wybor == KEY_UP && opcja!=3)
                         {
                         opcja++;
                         }
-                        else if (wybor == 258 && opcja!=1)
+                        else if (wybor == KEY_DOWN && opcja!=1)
                         {
                         opcja--;
                         }
