@@ -205,3 +205,4 @@ newgame::newgame()
 getch();
 endwin();
 }
+
