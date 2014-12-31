@@ -16,7 +16,7 @@ newgame::newgame()
     int hp=max_hp;
     int base_dodge=agl*2;
     char *nazwa[10];
-    unsigned int wybor, potwierdzenie, opcja=3, rzedy, kolumny;
+    unsigned int wybor, potwierdzenie, opcja=3, rzedy, kolumny, opcja1=3, opcja2=3;
 
     for(int i=0;i<10;i++)
         nazwa[i]=&imie[i];
@@ -87,13 +87,13 @@ newgame::newgame()
                     clear();
 
                     do{
-                        if (wybor == KEY_UP && opcja!=3)
+                        if (wybor == KEY_UP && opcja1!=3)
                         {
-                        opcja++;
+                        opcja1++;
                         }
-                        else if (wybor == KEY_DOWN && opcja!=1)
+                        else if (wybor == KEY_DOWN && opcja1!=1)
                         {
-                        opcja--;
+                        opcja1--;
                         }
                         if(wybor == 10)
                         {
@@ -107,28 +107,97 @@ newgame::newgame()
                     printw(" Ale i tak skoro u nas sie znalazles moglbys\n  o sobie cos powiedziec.");
                     printw(" Czym zajmowales sie za dawnego zycia?\n");
 
-            if(opcja == 3) attron(A_BOLD);
+            if(opcja1 == 3) attron(A_BOLD);
             printw("\n  Bylem zolnierzem\n");
             attroff(A_BOLD);
 
-            if(opcja == 2) attron(A_BOLD);
+            if(opcja1 == 2) attron(A_BOLD);
             printw("  Bylem kupcem\n");
             attroff(A_BOLD);
 
-            if(opcja == 1) attron(A_BOLD);
+            if(opcja1 == 1) attron(A_BOLD);
             printw("  Wstyd mi sie przyznac, ale bylem... zlodziejem\n");
             attroff(A_BOLD);
 
         wybor=getch();
         clear();
                       }while(1==1);
+                      switch(opcja1)
+
+                        {
+                        case 3:
+                            {
+                                wybor=0;
+                                opcja2=3;
+                                clear();
+                    do{
+
+                        if (wybor == KEY_UP && opcja2!=3)
+                        {
+                        opcja2++;
+                        }
+                        else if (wybor == KEY_DOWN && opcja2!=1)
+                        {
+                        opcja2--;
+                        }
+                        if(wybor == 10)
+                        {
+                        break;
+                        }
+
+        attron(COLOR_PAIR(1));
+        printw("\n  Nieznajomy:");
+        attroff(COLOR_PAIR(1));
+
+                    printw(" Ale i tak skoro u nas sie znalazles moglbys\n  o sobie cos powiedziec.");
+                    printw(" Czym zajmowales sie za dawnego zycia?\n");
+
+            if(opcja2 == 3) attron(A_BOLD);
+            printw("\n  Bylem zolnierzem\n");
+            attroff(A_BOLD);
+
+            if(opcja2 == 2) attron(A_BOLD);
+            printw("  Bylem kupcem\n");
+            attroff(A_BOLD);
+
+            if(opcja2 == 1) attron(A_BOLD);
+            printw("  Wstyd mi sie przyznac, ale bylem... zlodziejem\n");
+            attroff(A_BOLD);
+
+                                  }while(1==1);
+
+                                    switch(opcja2)
+                                    {
+                                    case 3: break;
+                                    case 2: break;
+                                    case 1: break;
+                                    }
+
+                                  }
+
+                        case 2:
+                            {
+                                break;
+                            }
+                        case 1:
+                            {
+                                break;
+                            }
+                        }
                       }
-            case 2:break;
-            case 1:break;
-            }
+            case 2:
+                {
+                    break;
+                }
+            case 1:
+                {
+                    break;
+                }
+        }
         }while (potwierdzenie != 10);
 
-    Player(imie, sila, agl, pkt_akcji, waga, inteligencja);
+
+    Player(imie, sila, agl, hp, pkt_akcji, waga, inteligencja, max_hp, base_dodge);
     Player plr;
     getch();
     clear();
