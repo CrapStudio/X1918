@@ -6,19 +6,24 @@
     sila=0;
     agl=0;
     hp=0;
+    max_hp=sqrt(64*sila);
     pkt_akcji=0;
     waga=0;
     inteligencja=0;
+    base_dodge=agl*2;
     }
 
-    Player::Player(string imie, int sila, int agl, int pkt_akcji, int waga, int inteligencja)
+    Player::Player(string imie, int sila, int agl,int hp, int pkt_akcji, int waga, int inteligencja,int max_hp, int base_dodge)
     {
         imie=imie;
         sila=sila;
         agl=agl;
+        hp=hp;
         pkt_akcji=pkt_akcji;
         waga=waga;
         inteligencja=inteligencja;
+        max_hp=max_hp;
+        base_dodge=base_dodge;
     }
 
     string Player::getimie(string imie)
