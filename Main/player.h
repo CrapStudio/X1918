@@ -17,7 +17,7 @@ private:
     int inteligencja;
     int base_dodge=agl*2;
 public:
-    Player(string imie, int sila, int agl, int pkt_akcji, int waga, int inteligencja);
+    Player(string imie, int sila, int agl, int hp, int pkt_akcji, int waga, int inteligencja, int max_hp, int base_dodge);
     Player();
     string getimie(string);
     int getsila(int);
